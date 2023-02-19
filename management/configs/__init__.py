@@ -10,7 +10,7 @@ CONFIG_PATH = Path("~")
 if platform.system() == "Windows":
     CONFIG_PATH = Path(environ["USERPROFILE"] + r"\AppData\Local\MLDataManagement\Configuration.toml")
 elif platform.system() == "Linux" or platform.system() == "Darwin":
-    CONFIG_PATH = Path("~/.config/ml_data_management/config.tml")
+    CONFIG_PATH = Path(environ["HOME"] + r"/.config/ml_data_management/config.tml")
 
 
 class Configuration:
